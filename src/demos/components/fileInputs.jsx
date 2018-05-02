@@ -44,10 +44,10 @@ class FileInputs extends Component {
             accept="audio/*"
             raised
             multiple
-            style={{ width: "100%" }}
             onChange={(e) => {
               this.handleFiles(e.target.files, "audioFiles");
             }}
+            style={{ width: "100%" }}
           >
             Upload multiple audio file
           </FileInput>
