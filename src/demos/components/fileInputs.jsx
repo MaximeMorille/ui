@@ -45,7 +45,9 @@ class FileInputs extends Component {
             raised
             multiple
             style={{ width: "100%" }}
-            onChange={(e) => this.handleFiles(e.target.files, "audioFiles")}
+            onChange={(e) => {
+              this.handleFiles(e.target.files, "audioFiles");
+            }}
           >
             Upload multiple audio file
           </FileInput>
@@ -63,7 +65,9 @@ class FileInputs extends Component {
         <div style={{ padding: "16px" }}>
           <FileInput
             style={{ background: "#018786", color: "white", margin: "10px" }}
-            onChange={(e) => this.handleFiles(e.target.files, "fromIconFiles")}
+            onChange={(e) => {
+              this.handleFiles(e.target.files, "fromIconFiles");
+            }}
             icon="file_upload"
           />
 
@@ -71,7 +75,9 @@ class FileInputs extends Component {
             raised
             disabled
             style={{ margin: "10px" }}
-            onChange={(e) => this.handleFiles(e.target.files, "fromIconFiles")}
+            onChange={(e) => {
+              this.handleFiles(e.target.files, "fromIconFiles");
+            }}
             icon="file_upload"
           />
 
