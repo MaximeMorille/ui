@@ -25,7 +25,7 @@ const FileInput = ({ accept, onChange, children, multiple, ...props }) => {
         type="file"
         style={{ display: "none" }}
         accept={accept}
-        ref={input => {
+        ref={(input) => {
           fileInputRef = input;
         }}
         onChange={onChange}
