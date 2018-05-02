@@ -6,7 +6,7 @@ import FileInput from "libs/components/fileInput";
 describe("FileInput", () => {
   it("renders correctly", () => {
     const component = renderer.create(
-      <FileInput onChange={(e) => console.log(e)} />,
+      <FileInput onChange={jest.fn()} />,
     );
 
     const tree = component.toJSON();
@@ -15,7 +15,7 @@ describe("FileInput", () => {
 
   it("should render children", () => {
     const component = renderer.create(
-      <FileInput onChange={(e) => console.log(e)}>Upload files</FileInput>,
+      <FileInput onChange={jest.fn()}>Upload files</FileInput>,
     );
 
     const tree = component.toJSON();
@@ -24,7 +24,7 @@ describe("FileInput", () => {
 
   it("should define accepted files", () => {
     const component = renderer.create(
-      <FileInput onChange={(e) => console.log(e)} accept="audio/mp3">
+      <FileInput onChange={jest.fn()} accept="audio/mp3">
         Upload files
       </FileInput>,
     );
@@ -35,7 +35,7 @@ describe("FileInput", () => {
 
   it("should allow to select multiple files", () => {
     const component = renderer.create(
-      <FileInput onChange={(e) => console.log(e)} multiple>
+      <FileInput onChange={jest.fn()} multiple>
         Upload files
       </FileInput>,
     );
