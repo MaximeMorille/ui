@@ -5,9 +5,7 @@ import FileInput from "libs/components/fileInput";
 
 describe("FileInput", () => {
   it("renders correctly", () => {
-    const component = renderer.create(
-      <FileInput onChange={jest.fn()} />,
-    );
+    const component = renderer.create(<FileInput onChange={jest.fn()} />);
 
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
